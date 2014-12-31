@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="JSCheck.master.cs" Inherits="NRDXboxStore.JSCheck" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>XBox Game Store</title>
+    <script type="text/javascript" src="Scripts/jquery-2.1.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#MainBody").show(); // confirmed JS, show the body of the page
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="HeadPlaceholder" runat="server">        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <noscript>
+        <div>
+            Please enable JavaScript (or switch to a browser that supports it) to be able to use this page!
+        </div>
+    </noscript>
+    <form id="bodyForm" runat="server">
+    <div id="MainBody" style="display: none;">
+        <asp:ContentPlaceHolder ID="BodyPlaceholder" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
